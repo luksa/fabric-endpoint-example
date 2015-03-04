@@ -34,8 +34,12 @@
         </cm:default-properties>
     </cm:property-placeholder>
 
-    <reference id="zkClient" interface="org.fusesource.fabric.zookeeper.IZKClient" />
-    
+    <reference id="curator" interface="org.apache.curator.framework.CuratorFramework"/>
+
+    <bean id="fabric-camel" class="io.fabric8.camel.FabricComponent">
+        <property name="curator" ref="curator"/>
+    </bean>
+
     <camelContext id="baseCamelContext" xmlns="http://camel.apache.org/schema/blueprint">
         <propertyPlaceholder location="blueprint:myblueprint.placeholder" id="properties"/>
         

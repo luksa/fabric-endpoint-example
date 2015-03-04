@@ -42,7 +42,7 @@ Follow the instructions from the ['Managing a Deployment using Fuse Fabric'-guid
 for the consumer:
 
 * `profile name`: fabric-endpoint-consumer
-* `parent profiles`: camel, karaf
+* `parent profiles`: feature-camel, karaf
 * `features file url`: mvn:com.fusesource.examples/fabric-endpoint-features/1.0-SNAPSHOT/xml/features
 * Add the feature `fabric-endpoint-consumer` to the profile
 
